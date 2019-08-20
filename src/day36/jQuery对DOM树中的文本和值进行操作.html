@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#btnHTML").click(function () {
+                $("#myDiv").html($("#txt").val());
+            });
+
+            $("#btnText").click(function () {
+                $("#myDiv").text($("#txt").val());
+            });
+        })
+    </script>
+</head>
+<body>
+<input type="text" placeholder="请输入标签" id="txt">
+<input type="button" id="btnHTML" value="创建HTML">
+<input type="button" id="btnText" value="创建Text">
+<hr>
+<div id="myDiv"></div>
+
+</body>
+</html>

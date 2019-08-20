@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="img/0.jpg" id="pic" width="600">
+<script type="text/javascript">
+    //每过3秒，替换1次图片的地址src /** 参数1：被调用的函数 * 参数2： 过多久调用一次函数 */
+    window.setInterval("changePic()", 3000);
+    var num = 1;
+
+    function changePic(){
+        var pic = document.getElementById('pic');
+        pic.src = 'img/' + num + ".jpg";
+        num++;
+        if(num == 5){
+            num = 0;
+        }
+    }
+</script>
+</body>
+</html>

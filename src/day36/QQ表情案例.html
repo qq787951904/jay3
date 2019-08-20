@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">* {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .emoji {
+        margin: 50px;
+    }
+
+    ul {
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+    }
+
+    .emoji img {
+        cursor: pointer;
+    } </style>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("li span").click(function () {
+                $("p").append($(this).clone());
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="emoji">
+    <ul>
+        <li><span>a</span></li>
+        <li><span>b</span></li>
+        <li><span>c</span></li>
+        <li><span>d</span></li>
+        <li><span>e</span></li>
+        <li><span>f</span></li>
+        <li><span>g</span></li>
+        <li><span>h</span></li>
+        <li><span>i</span></li>
+        <li><span>j</span></li>
+        <li><span>l</span></li>
+        <li><span>M</span></li>
+    </ul>
+    <p class="word"><strong>请发言：</strong></p></div>
+</body>
+</html>

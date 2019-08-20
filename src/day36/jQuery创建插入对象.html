@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script language="JavaScript" src="../js/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        div, span {
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Roman;
+        }
+
+        div .mini {
+            width: 30px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family: Roman;
+        }
+
+        div.visible {
+            display: none;
+        } </style>
+</head>
+<body>
+<ul id="city">
+    <li id="bj" name="beijing">北京</li>
+    <li id="tj" name="tianjin">天津</li>
+    <li id="cq" name="chongqing">重庆</li>
+</ul>
+<ul id="love">
+    <li id="fk" name="fankong">反恐</li>
+    <li id="xj" name="xingji">星际</li>
+</ul>
+<div id="foo1">Hello1</div>
+</body>
+<script type="text/javascript">
+    /**将反恐放置到city的后面*/
+    $("#city").append($("#fk"));
+    /**将反恐放置到city的最前面*/
+    $("#city").prepend($("#fk"));
+    /**将反恐放置到天津的前面*/
+    $("#tj").before($("#fk"));
+    /**将反恐放置到天津的后面*/
+    $("#tj").after($("#fk"));
+    /**创建上海放置到city的后面*/
+    $("#city").append($("<li id='sh' name=\"shanghai\">上海</li>"));
+</script>
+</html>

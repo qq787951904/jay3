@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var score = window.prompt("请输入您的分数：", "60");
+
+    switch(true){
+        case score >= 90 && score <= 100:
+            document.write("优秀" + '<br/>');
+            break;
+        case score >= 60 && score < 90:
+            document.write("及格" + '<br/>');
+            break;
+        case score >=0 && score < 60:
+            document.write("不及格" + '<br/>');
+            break;
+        default:
+            document.write("分数有误" + '<br/>');
+            break;
+    }
+</script>
+</body>
+</html>

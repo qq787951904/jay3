@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <style></style>
+</head>
+<body>
+<ul id="cities">
+    <li>南昌</li>
+    <li>九江</li>
+    <li>赣州</li>
+    <li>上饶</li>
+    <li>景德镇</li>
+</ul>
+<script>
+
+    var lis = $("#cities li");
+
+    //1.原始方法遍历
+    for(var i=0; i<lis.length; i++){
+        var liJQ = $(lis[i]);
+        console.log(liJQ.text());
+    }
+
+    //2.JQuery对象方法遍历
+    //index :就是元素在集合中的索引 (从0开始)
+    // element ：就是集合中的每一个元素JS对象
+    lis.each(function(index, element){
+       console.log($(element).text());
+    });
+
+    //3.JQuery的全局方法遍历
+    $.each(lis, function (index, element) {
+        console.log($(element).text());
+    });
+
+    //4.jQuery3.0新特性for of语句遍历
+    for(var li of lis){
+        var liJQ2 = $(li);
+        console.log(liJQ2.text());
+    }
+
+
+
+</script>
+</body>
+</html>

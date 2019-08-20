@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            //普通写法：原始的以事件名方式或使用on绑定多个事件
+            //事件名方式
+            $("#myDiv").mouseover(function () {
+                $(this).css("background-color", "green");
+            });
+            $("#myDiv").mouseout(function () {
+                $(this).css("background-color", "orange");
+            });
+            // 以on方式
+            $("#myDiv").on({
+                mouseover: function () {
+                    $(this).css("background-color", "green");
+                }, mouseout: function () {
+                    $(this).css("background-color", "orange");
+                }
+            });
+
+            //链式写法（推荐）
+            $("#myDiv2").mouseover(function () {
+                $(this).css("background-color", "green");
+            }).mouseout(function () {
+                $(this).css("background-color", "orange");
+            });
+
+            //切换函数写法
+            //hover(over[,out])
+            $("#myDiv3").hover(function () {
+                $(this).css("background-color", "green");
+            }, function () {
+                $(this).css("background-color", "orange");
+            });
+        })
+    </script>
+</head>
+<body>
+<div id="myDiv" style="width:300px;height:300px;background:orange"> 鼠标移入变成绿色，移出恢复橙</div>
+<div id="myDiv2" style="width:300px;height:300px;background:orange"> 鼠标移入变成绿色，移出恢复橙</div>
+<div id="myDiv3" style="width:300px;height:300px;background:orange"> 鼠标移入变成绿色，移出恢复橙</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> <!--添加样式修改表格-->
+    <style type="text/css"> td { /*设置内边距*/
+        padding: 5px;
+    }
+
+    table { /*边框设置为细线模式*/
+        border-collapse: collapse;
+    }
+
+    td:hover {
+        background-color: yellow;
+    } </style>
+</head>
+<body>
+<script type="text/javascript">
+    var num = window.prompt("请输入乘法表行数：", "9");
+    document.write("<h3>" + num + "&times;" + num + "乘法表</h3>");
+    document.write("<table border='1'>");
+    for (var i = 1; i <= num; i++) {
+        document.write("<tr>");
+        for (var j = 1; j <= i; j++) {
+            //每次输出一列
+            document.write("<td>");
+            document.write(j + "&times;" + i + "=" + (i * j));
+            //每次输出一个空格
+            document.write("</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
+</body>
+</html>
